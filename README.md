@@ -2,17 +2,17 @@
 
 <div align="center">
 
-![AI Chatbot Screenshot](https://raw.githubusercontent.com/naimkatiman/Full-Chatbot-create-by-Claude3.5/v3/screenshot.png)
+![AI Chatbot Screenshot](https://raw.githubusercontent.com/naimkatiman/ChatGPT-Clone/v3/screenshot.png)
 
-![AI Chatbot Screenshot](https://raw.githubusercontent.com/naimkatiman/Full-Chatbot-create-by-Claude3.5/v3/screenshot1.png)
+![AI Chatbot Screenshot](https://raw.githubusercontent.com/naimkatiman/ChatGPT-Clone/v3/screenshot1.png)
 
 
 *An AI-powered chatbot created with assistance from Claude 3.5*
 
-[![GitHub license](https://img.shields.io/github/license/naimkatiman/Full-Chatbot-create-by-Claude3.5)](https://github.com/naimkatiman/Full-Chatbot-create-by-Claude3.5/blob/v3/LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/naimkatiman/Full-Chatbot-create-by-Claude3.5)](https://github.com/naimkatiman/Full-Chatbot-create-by-Claude3.5/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/naimkatiman/Full-Chatbot-create-by-Claude3.5)](https://github.com/naimkatiman/Full-Chatbot-create-by-Claude3.5/network)
-[![GitHub issues](https://img.shields.io/github/issues/naimkatiman/Full-Chatbot-create-by-Claude3.5)](https://github.com/naimkatiman/Full-Chatbot-create-by-Claude3.5/issues)
+[![GitHub license](https://img.shields.io/github/license/naimkatiman/ChatGPT-Clone)](https://github.com/naimkatiman/ChatGPT-Clone/blob/v3/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/naimkatiman/ChatGPT-Clone)](https://github.com/naimkatiman/ChatGPT-Clone/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/naimkatiman/ChatGPT-Clone)](https://github.com/naimkatiman/ChatGPT-Clone/network)
+[![GitHub issues](https://img.shields.io/github/issues/naimkatiman/ChatGPT-Clone)](https://github.com/naimkatiman/ChatGPT-Clone/issues)
 
 </div>
 
@@ -36,8 +36,8 @@ Before you begin, ensure you have met the following requirements:
 
 1. Clone the repository: 
    ```
-   git clone https://github.com/naimkatiman/Full-Chatbot-create-by-Claude3.5.git
-   cd Full-Chatbot-create-by-Claude3.5
+   git clone https://github.com/naimkatiman/ChatGPT-Clone.git
+   cd ChatGPT-Clone
    ```
 2. Install dependencies: `npm install`
 3. Set up environment: 
@@ -92,7 +92,7 @@ After deployment, open your browser and navigate to the Firebase-hosted URL (you
 <summary>👀 Preview</summary>
 <br>
 
-![AI Chatbot Demo](https://raw.githubusercontent.com/naimkatiman/Full-Chatbot-create-by-Claude3.5/v3/demo.gif)
+![AI Chatbot Demo](https://raw.githubusercontent.com/naimkatiman/ChatGPT-Clone/v3/demo.gif)
 
 </details>
 
@@ -112,7 +112,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Naim Katiman - [@naimkatiman](https://twitter.com/naimkatiman)
 
-Project Link: [https://github.com/naimkatiman/Full-Chatbot-create-by-Claude3.5](https://github.com/naimkatiman/Full-Chatbot-create-by-Claude3.5)
+Project Link: [https://github.com/naimkatiman/ChatGPT-Clone](https://github.com/naimkatiman/ChatGPT-Clone)
 
 ## Acknowledgments
 
@@ -126,7 +126,3 @@ Project Link: [https://github.com/naimkatiman/Full-Chatbot-create-by-Claude3.5](
 Made with ❤️ and ☕
 </div>
 ```
-
-This combined README provides a comprehensive overview of your project, including setup instructions, usage guidelines, deployment steps, and contribution information. It also maintains the stylish presentation from your original README while incorporating additional technical details.
-
-Remember to replace any placeholder URLs or information with the actual data for your project. Also, ensure that the image links (screenshot.png and demo.gif) are correct and the images are available in your repository.
