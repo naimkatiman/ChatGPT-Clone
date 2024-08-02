@@ -1,0 +1,29 @@
+{
+  "name": "ai-chatbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/backend/server.js",
+    "dev": "npx nodemon src/backend/server.ts",
+    "build": "tsc",
+    "postbuild": "xcopy /E /I /Y src\\frontend dist\\frontend && tsc -p tsconfig.frontend.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.0.2",
+    "@types/node-fetch": "^2.6.11",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "@types/express": "^4.17.21",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "openai": "^4.53.2",
+    "undici": "^6.19.5"
+  }
+}
