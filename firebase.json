@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "chatgpt-ciplak",
     "public": "public",
     "ignore": [
       "firebase.json",
@@ -8,13 +9,16 @@
     ],
     "rewrites": [
       {
-        "source": "**",
+        "source": "/api/**",
         "function": "chatbot"
+      },
+      {
+        "source": "**",
+        "destination": "/index.html"
       }
     ]
   },
   "functions": {
-    "source": "dist",
-    "runtime": "nodejs18"
+    "source": "dist"
   }
 }
