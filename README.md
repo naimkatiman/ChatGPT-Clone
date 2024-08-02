@@ -126,7 +126,3 @@ Project Link: [https://github.com/naimkatiman/ChatGPT-Clone](https://github.com/
 Made with ❤️ and ☕
 </div>
 ```
-
-This combined README provides a comprehensive overview of your project, including setup instructions, usage guidelines, deployment steps, and contribution information. It also maintains the stylish presentation from your original README while incorporating additional technical details.
-
-Remember to replace any placeholder URLs or information with the actual data for your project. Also, ensure that the image links (screenshot.png and demo.gif) are correct and the images are available in your repository.
