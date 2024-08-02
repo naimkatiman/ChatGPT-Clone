@@ -1,67 +1,59 @@
 "use strict";
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 document.addEventListener('DOMContentLoaded', () => {
-    const chatContainer = document.getElementById('chat-container');
-    const userInput = document.getElementById('user-input');
+    var _a;
+    const chatbotContainer = (_a = document.getElementById('chatbot-container')) !== null && _a !== void 0 ? _a : document.body;
     const sendButton = document.getElementById('send-button');
-    const clearButton = document.getElementById('clear-chat');
-    const typingIndicator = document.getElementById('typing-indicator');
+    const userInput = document.getElementById('user-input');
     function addMessage(message, isUser) {
         const messageDiv = document.createElement('div');
         messageDiv.className = `message ${isUser ? 'user-message' : 'bot-message'}`;
         messageDiv.textContent = message;
-        chatContainer.appendChild(messageDiv);
-        chatContainer.scrollTop = chatContainer.scrollHeight;
+        chatbotContainer === null || chatbotContainer === void 0 ? void 0 : chatbotContainer.appendChild(messageDiv);
+        chatbotContainer === null || chatbotContainer === void 0 ? void 0 : chatbotContainer.scrollTo(0, chatbotContainer.scrollHeight);
     }
-    function showTypingIndicator() {
-        typingIndicator.classList.remove('d-none');
-    }
-    function hideTypingIndicator() {
-        typingIndicator.classList.add('d-none');
+    function addTypingIndicator() {
+        const typingDiv = document.createElement('div');
+        typingDiv.className = 'message bot-message typing-indicator';
+        typingDiv.innerHTML = '<span></span><span></span><span></span>';
+        chatbotContainer === null || chatbotContainer === void 0 ? void 0 : chatbotContainer.appendChild(typingDiv);
+        chatbotContainer === null || chatbotContainer === void 0 ? void 0 : chatbotContainer.scrollTo(0, chatbotContainer.scrollHeight);
+        return typingDiv;
     }
     function sendMessage() {
-        return __awaiter(this, void 0, void 0, function* () {
-            const message = userInput.value.trim();
-            if (message) {
-                addMessage(message, true);
+        var _a;
+        const message = (_a = userInput === null || userInput === void 0 ? void 0 : userInput.value.trim()) !== null && _a !== void 0 ? _a : '';
+        if (message) {
+            addMessage(message, true);
+            if (userInput)
                 userInput.value = '';
-                showTypingIndicator();
-                try {
-                    const response = yield fetch('/api/chat', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ message })
-                    });
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    const data = yield response.json();
-                    hideTypingIndicator();
-                    addMessage(data.reply, false);
-                }
-                catch (error) {
-                    console.error('Error:', error);
-                    hideTypingIndicator();
-                    addMessage('Sorry, there was an error processing your request.', false);
-                }
-            }
-        });
+            const typingIndicator = addTypingIndicator();
+            fetch('/api/chat', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ message }),
+            })
+                .then(response => response.json())
+                .then(data => {
+                typingIndicator.remove();
+                addMessage(data.reply, false);
+            })
+                .catch(error => {
+                console.error('Error:', error);
+                typingIndicator.remove();
+                addMessage('Sorry, there was an error processing your request.', false);
+            });
+        }
     }
-    sendButton.addEventListener('click', sendMessage);
-    userInput.addEventListener('keypress', (e) => {
+    sendButton === null || sendButton === void 0 ? void 0 : sendButton.addEventListener('click', sendMessage);
+    userInput === null || userInput === void 0 ? void 0 : userInput.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {
             sendMessage();
         }
     });
-    clearButton.addEventListener('click', () => {
-        chatContainer.innerHTML = '';
-    });
+    // Add a welcome message
+    setTimeout(() => {
+        addMessage("Hello! I'm your AI assistant. How can I help you today?", false);
+    }, 500);
 });
