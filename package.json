@@ -7,8 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node dist/backend/server.js",
     "dev": "npx nodemon src/backend/server.ts",
-    "build": "tsc",
-    "postbuild": "xcopy /E /I /Y src\\frontend dist\\frontend && tsc -p tsconfig.frontend.json"
+    "postbuild": "xcopy /E /I /Y src\\frontend dist\\frontend && tsc -p tsconfig.frontend.json",
+    "build": "tsc && tsc -p tsconfig.frontend.json",
+   "deploy": "npm run build && firebase deploy"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +24,8 @@
     "@types/express": "^4.17.21",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
+    "firebase-admin": "^12.3.0",
+    "firebase-functions": "^5.0.1",
     "openai": "^4.53.2",
     "undici": "^6.19.5"
   }
