@@ -1,4 +1,3 @@
-```markdown
 # AI Chatbot 🤖
 
 <div align="center">
@@ -15,43 +14,19 @@
 </div>
 
 ## 🌟 Features
-
 - 💬 Real-time chat interface
 - 🧠 Powered by OpenAI's GPT model
 - 🎨 Clean and responsive design
 - 🔄 Easy to extend and customize
 
 ## 🚀 Setup
-
-1. Clone the repository:
-   ```
-   git clone https://github.com/naimkatiman/Full-Chatbot-create-by-Claude3.5.git
-   cd Full-Chatbot-create-by-Claude3.5
-   ```
-
-2. Install dependencies:
-   ```
-   npm install
-   ```
-
-3. Set up environment variables:
-   ```
-   cp .env.example .env
-   ```
-   Then, edit `.env` and add your OpenAI API key.
-
-4. Build the project:
-   ```
-   npm run build
-   ```
-
-5. Start the server:
-   ```
-   npm start
-   ```
+1. Clone the repository: `git clone https://github.com/naimkatiman/Full-Chatbot-create-by-Claude3.5.git && cd Full-Chatbot-create-by-Claude3.5`
+2. Install dependencies: `npm install`
+3. Set up environment: `cp .env.example .env` (Then edit `.env` and add your OpenAI API key)
+4. Build the project: `npm run build`
+5. Start the server: `npm start`
 
 ## 🖥️ Usage
-
 Open your browser and navigate to `http://localhost:3001` (or the port shown in the console).
 
 <details>
@@ -63,9 +38,6 @@ Open your browser and navigate to `http://localhost:3001` (or the port shown in 
 </details>
 
 ## 🤝 Contributing
-
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
@@ -73,13 +45,10 @@ Contributions are what make the open-source community such an amazing place to l
 5. Open a Pull Request
 
 ## 📜 License
-
 Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 📞 Contact
-
 Naim Katiman - [@naimkatiman](https://twitter.com/naimkatiman)
-
 Project Link: [https://github.com/naimkatiman/Full-Chatbot-create-by-Claude3.5](https://github.com/naimkatiman/Full-Chatbot-create-by-Claude3.5)
 
 ---
@@ -87,5 +56,3 @@ Project Link: [https://github.com/naimkatiman/Full-Chatbot-create-by-Claude3.5](
 <div align="center">
 Made with ❤️ and ☕
 </div>
-```
-
